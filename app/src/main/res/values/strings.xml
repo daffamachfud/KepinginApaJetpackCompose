@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KepinginApa</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="about">About</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="price">price</string>
+    <string name="back">Back</string>
+    <string name="add_to_wish">Add to wishlist</string>
+    <string name="remove_from_wish">Remove from wishlist</string>
+</resources>
