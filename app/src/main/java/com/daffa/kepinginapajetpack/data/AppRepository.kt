@@ -1,74 +1,60 @@
 package com.daffa.kepinginapajetpack.data
 
-import com.daffa.kepinginapajetpack.data.source.local.LocalDataSource
-import com.daffa.kepinginapajetpack.data.source.local.entity.WishlistEntity
 import com.daffa.kepinginapajetpack.model.FakeWishData
-import com.daffa.kepinginapajetpack.model.Wish
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import com.daffa.kepinginapajetpack.model.Wishlist
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.map
 
-class AppRepository private constructor(
-    private val localDataSource: LocalDataSource
-) : AppDataSource {
-    private val wish = mutableListOf<Wish>()
+class AppRepository {
+    private val wishlist = mutableListOf<Wishlist>()
 
     init {
-        if (wish.isEmpty()) {
+        if (wishlist.isEmpty()) {
             FakeWishData.wishlist.forEach {
-                wish.add(
-                    Wish(
-                        it.id,
-                        it.name,
-                        it.image,
-                        it.category,
-                        it.description,
-                        it.price,
-                        it.link,
-                        it.deleted
-                    )
-                )
+                wishlist.add(Wishlist(it, false))
             }
         }
     }
 
-    override suspend fun insertWishList(wish: WishlistEntity) = withContext(Dispatchers.IO) {
-        localDataSource.insertWishlist(wish)
+    fun getAllWishlist(): Flow<List<Wishlist>> = flowOf(wishlist)
+
+    fun getWishlistById(wishId: Int): Wishlist = wishlist.first { it.wish.id == wishId }
+
+    fun updateWishlist(wishId: Int?, isAdded: Boolean): Flow<Boolean> {
+        val index = wishlist.indexOfFirst { it.wish.id == wishId }
+        val result = if (index >= 0) {
+            val wish = wishlist[index]
+            wishlist[index] =
+                wish.copy(wish = wish.wish, isAdded = isAdded)
+            true
+        } else {
+            false
+        }
+        return flowOf(result)
     }
 
-    override suspend fun deleteWish(wish: WishlistEntity) = withContext(Dispatchers.IO){
-        localDataSource.deleteWish(wish)
-    }
-
-    override suspend fun isAddedWishlist(id: Int): Boolean = withContext(Dispatchers.IO){
-        localDataSource.isAddedWishlist(id)
-    }
-
-    override fun getSuggestionWishList(): Flow<List<Wish>> {
-        return flowOf(wish)
-    }
-
-    override fun getWishById(id: Int): Wish {
-        return wish.first {
-            it.id == id
+    fun getAddedWish(): Flow<List<Wishlist>> {
+        return getAllWishlist().map { wish ->
+            wish.filter {
+                it.isAdded
+            }
         }
     }
 
-
-    override fun getAllWishlist(): Flow<List<WishlistEntity>> = localDataSource.getAllWishlist()
+//    fun searchWish(query: String): List<Wishlist>{
+//        return wishlist.filter { it.wish.name!!.contains(query,ignoreCase = false) }
+//    }
 
     companion object {
         @Volatile
         private var instance: AppRepository? = null
 
-        fun getInstance(
-            localDataSource: LocalDataSource
-        ): AppRepository =
+        fun getInstance(): AppRepository =
             instance ?: synchronized(this) {
-                instance ?: AppRepository(localDataSource)
+                AppRepository().apply {
+                    instance = this
+                }
             }
     }
 

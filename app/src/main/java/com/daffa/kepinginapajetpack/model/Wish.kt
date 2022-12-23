@@ -8,5 +8,4 @@ data class Wish(
     var description: String?,
     var price:Double?,
     var link:String?,
-    var deleted:Boolean?
     )

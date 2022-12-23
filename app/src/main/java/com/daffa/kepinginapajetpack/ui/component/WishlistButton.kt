@@ -5,7 +5,7 @@ import androidx.compose.material.Button
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -41,7 +41,7 @@ fun WishlistButton(
             ) {
                 Spacer(modifier = Modifier.width(4.dp))
                 Icon(
-                    imageVector = if(isAdded) Icons.Default.Close else Icons.Default.Check,
+                    imageVector = if(isAdded) Icons.Default.Close else Icons.Default.Add,
                     modifier = Modifier
                         .size(18.dp),
                     contentDescription = "drawable_icons"
@@ -59,7 +59,7 @@ fun WishlistButton(
 @Composable
 @Preview(showBackground = true)
 fun OrderButtonPreview() {
-    KepinginApaJetpackTheme() {
+    KepinginApaJetpackTheme {
         WishlistButton(
             isAdded = false,
             onClick = {}

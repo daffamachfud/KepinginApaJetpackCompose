@@ -8,4 +8,8 @@
     <string name="back">Back</string>
     <string name="add_to_wish">Add to wishlist</string>
     <string name="remove_from_wish">Remove from wishlist</string>
+    <string name="about_name">Daffa Radifanka</string>
+    <string name="about_email">daffamachfud@gmail.com</string>
+    <string name="empty_wishlist">Wishlist Kosong !</string>
+    <string name="search_bar">Cari …</string>
 </resources>

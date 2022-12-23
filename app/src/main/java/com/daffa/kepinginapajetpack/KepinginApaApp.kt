@@ -21,9 +21,11 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.daffa.kepinginapajetpack.ui.navigation.NavigationItem
 import com.daffa.kepinginapajetpack.ui.navigation.Screen
-import com.daffa.kepinginapajetpack.ui.screen.home.HomeScreen
-import com.daffa.kepinginapajetpack.ui.theme.KepinginApaJetpackTheme
+import com.daffa.kepinginapajetpack.ui.screen.about.AboutScreen
 import com.daffa.kepinginapajetpack.ui.screen.detail.DetailScreen
+import com.daffa.kepinginapajetpack.ui.screen.home.HomeScreen
+import com.daffa.kepinginapajetpack.ui.screen.wishlist.WishlistScreen
+import com.daffa.kepinginapajetpack.ui.theme.KepinginApaJetpackTheme
 
 @Composable
 fun KepinginApaApp(
@@ -53,17 +55,15 @@ fun KepinginApaApp(
                     }
                 )
             }
-
-//            composable(Screen.Wishlist.route) {
-//                val context = LocalContext.current
-//                CartScreen(
-//                    onOrderButtonClicked = { message ->
-//                        shareOrder(context, message)
-//                    }
-//                )
-//            }
+            composable(Screen.Wishlist.route) {
+                WishlistScreen(
+                    navigateToDetail = { wishId ->
+                        navController.navigate(Screen.DetailWish.createRoute(wishId))
+                    }
+                )
+            }
             composable(Screen.About.route) {
-//                ProfileScreen()
+                AboutScreen()
             }
             composable(
                 route = Screen.DetailWish.route,
@@ -146,7 +146,7 @@ private fun BottomBar(
 @Preview(showBackground = true)
 @Composable
 fun KepinginAppPreview() {
-    KepinginApaJetpackTheme() {
+    KepinginApaJetpackTheme {
         KepinginApaApp()
     }
 }

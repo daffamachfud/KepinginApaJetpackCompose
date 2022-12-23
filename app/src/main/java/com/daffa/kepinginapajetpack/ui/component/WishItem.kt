@@ -13,21 +13,21 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.daffa.kepinginapajetpack.model.FakeWishData
-import com.daffa.kepinginapajetpack.model.Wish
 import com.daffa.kepinginapajetpack.ui.theme.KepinginApaJetpackTheme
 import com.daffa.kepinginapajetpack.utils.formatCurrencyRupiah
 
 @Composable
 fun WishItem(
-    wish: Wish,
+    image: String,
+    name: String,
+    price: Double,
     modifier: Modifier = Modifier,
 ) {
     Column(
         modifier = modifier
     ) {
         AsyncImage(
-            model = wish.image,
+            model = image,
             contentDescription = "Image wish",
             contentScale = ContentScale.Crop,
             modifier = Modifier
@@ -35,7 +35,7 @@ fun WishItem(
                 .size(120.dp)
         )
         Text(
-            text = wish.name ?: "",
+            text = name,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
             style = MaterialTheme.typography.subtitle1.copy(
@@ -43,7 +43,7 @@ fun WishItem(
             )
         )
         Text(
-            text = wish.price.formatCurrencyRupiah(),
+            text = price.formatCurrencyRupiah(),
             style = MaterialTheme.typography.subtitle2,
             color = MaterialTheme.colors.secondary
         )
@@ -53,9 +53,9 @@ fun WishItem(
 @Composable
 @Preview(showBackground = true)
 fun WishItemPreview() {
-    KepinginApaJetpackTheme() {
+    KepinginApaJetpackTheme {
         WishItem(
-            FakeWishData.wishlist[0]
+            "", "NAMA", 20000.0
         )
     }
 }

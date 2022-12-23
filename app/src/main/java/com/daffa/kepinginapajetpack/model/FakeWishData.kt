@@ -14,8 +14,8 @@ object FakeWishData {
                     "Xiaomi TV A2 32\" dilengkapi dengan Chromecast bulit-in™* dan Miracast memungkinkan Anda tetap bisa menonton apa yang sedang ditonton dari perangkat seluler di layar TV, sehingga meningkatkan pengalaman visual Anda.",
             1899000.0,
             "https://shopee.co.id/Xiaomi-TV-A2-32-Smart-HD-Dolby-Audio%E2%84%A2-Android-TV%E2%84%A2-Netflix-Disney--i.51925611.20022674827?sp_atk=90f51bac-6ab6-4b8d-84c0-c0541227f340&xptdk=90f51bac-6ab6-4b8d-84c0-c0541227f340",
-            false
-        ),
+
+            ),
         Wish(
             2,
             "PHILIPS 1.8L Digital Rice Cooker",
@@ -29,8 +29,8 @@ object FakeWishData {
                     "- Tidak ada fitur low sugar",
             697000.0,
             "https://shopee.co.id/PHILIPS-1.8L-Digital-Rice-Cooker-HD4515-33-400Watt-8-Menu-White-putih-mejikom-multi-fungsi-i.22841291.6243512582?sp_atk=7447f048-4134-4e98-ae9c-fb3bed61a93c&xptdk=7447f048-4134-4e98-ae9c-fb3bed61a93c",
-            false
-        ),
+
+            ),
         Wish(
             3,
             "MSI Stealth GS77",
@@ -105,8 +105,8 @@ object FakeWishData {
                     "- RAM dapat diupgarde\t\t",
             64999000.0,
             "https://shopee.co.id/MSI-Stealth-GS77-12UHS-019ID-i9-12900H-64GB-2TB.SSD-RTX3080tI-17.3-W11-Home-2-Year-i.41303795.2848331798?sp_atk=21e1d7a3-b7af-49c1-a0bc-6349868fc595&xptdk=21e1d7a3-b7af-49c1-a0bc-6349868fc595",
-            false
-        ),
+
+            ),
         Wish(
             4,
             "Logitech G304",
@@ -119,8 +119,8 @@ object FakeWishData {
                     "HERO adalah sensor optik baru yang revolusioner dirancang oleh Logitech G untuk menghadirkan kinerja terunggul di kelasnya dan efisiensi daya hingga 10 kali (dibandingkan dengan generasi sebelumnya). Sensor HERO menghadirkan kinerja yang konsisten dan sangat akurat dengan zero smoothing, filtering, atau akselerasi dari 200 hingga 12.000 DPI. G304 dapat menyimpan hingga 5 profil dengan maksimal 5 level DPI di onboard memory.",
             64999000.0,
             "https://shopee.co.id/MSI-Stealth-GS77-12UHS-019ID-i9-12900H-64GB-2TB.SSD-RTX3080tI-17.3-W11-Home-2-Year-i.41303795.2848331798?sp_atk=21e1d7a3-b7af-49c1-a0bc-6349868fc595&xptdk=21e1d7a3-b7af-49c1-a0bc-6349868fc595",
-            false
-        ),
+
+            ),
         Wish(
             5,
             "Apple iPad Pro (Gen 3)",
@@ -143,8 +143,8 @@ object FakeWishData {
                     "• Lebih dari satu juta aplikasi di App Store khusus untuk iPad",
             64999000.0,
             "https://shopee.co.id/Apple-iPad-Pro-(Gen-3)-11-inci-Wi-Fi-2TB-Space-Grey-i.241308147.11010467292?sp_atk=3ed48851-321e-4219-b249-cd1ebc771089&xptdk=3ed48851-321e-4219-b249-cd1ebc771089",
-            false
-        ),
+
+            ),
         Wish(
             6,
             "Apple iPhone 14 Pro 1TB",
@@ -177,8 +177,8 @@ object FakeWishData {
                     "* iOS 16 menawarkan semakin banyak cara untuk personalisasi, komunikasi, dan berbagi(6)",
             30999000.0,
             "https://shopee.co.id/Apple-iPhone-14-Pro-1TB-Gold-i.331370112.21253843411?sp_atk=e5d24922-d5d9-4001-81a0-966e948fb5e4&xptdk=e5d24922-d5d9-4001-81a0-966e948fb5e4",
-            false
-        ),
+
+            ),
         Wish(
             7,
             "Liburan ke Denpasar, Bali",
@@ -187,8 +187,8 @@ object FakeWishData {
             "Terbang dengan penerbangan tiket FLEXI memungkinkan kamu untuk melakukan reschedule tanpa biaya tambahan. Sangat cocok bagi kamu yang butuh fleksibilitas lebih karena perubahan rencana yang mendadak atau di luar pekiraan.",
             700000.0,
             "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2022-12-03&adult=1&child=0&infant=0&class=economy&flexiFare=false&airlines=8B",
-            false
-        ),
+
+            ),
         Wish(
             8,
             "Sony PS5 PlayStation 5 ",
@@ -212,8 +212,8 @@ object FakeWishData {
                     "Enjoy faster and smoother frame rates in select PS4 and PS VR games.",
             10500000.0,
             "https://www.tokopedia.com/butikgames/sony-ps5-playstation-5-console-mesin-sonyid-no-game?extParam=ivf%3Dfalse&src=topads",
-            false
-        ),
+
+            ),
         Wish(
             9,
             "Toyota Avanza ",
@@ -238,8 +238,8 @@ object FakeWishData {
                     "- 5 tahun member Astra World dengan layanan bantuan darurat 24 jam**",
             150000000.0,
             "https://www.tokopedia.com/a2000/toyota-avanza-program-superdeals-booking-fee-only?extParam=ivf%3Dfalse%26src%3Dsearch",
-            false
-        ),
+
+            ),
         Wish(
             10,
             "Vespa Matic Justin Bieber",
@@ -257,7 +257,7 @@ object FakeWishData {
                     "Harga di tokped Ada batas limit jd kita tulis 90jt agar bs di iklankan di tokped \uD83D\uDE4F",
             90000000.0,
             "https://www.tokopedia.com/winstoreauthentic/vespa-justin-bieber-ready-motor-vespa-sprint-justin-bieber-vespa?extParam=ivf%3Dfalse%26src%3Dsearch",
-            false
-        ),
+
+            ),
     )
 }
